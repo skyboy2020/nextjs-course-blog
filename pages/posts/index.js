@@ -1,9 +1,9 @@
 import React from 'react'
 
-function index() {
+function AllPostPage() {
   return (
-    <div>index</div>
+    <div>AllPostPage</div>
   )
 }
 
-export default index
+export default AllPostPage

@@ -1,7 +1,7 @@
-function index() {
+function HomePage() {
   return (
     <div>index</div>
   )
 }
 
-export default index
+export default HomePage
