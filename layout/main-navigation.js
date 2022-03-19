@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link'
+import Logo from './logo'
+import classes from './main-navigation.module.css'
 
-import Logo from './logo';
-import classes from './main-navigation.module.css';
-
+// 顶部导航
 function MainNavigation() {
   return (
     <header className={classes.header}>
@@ -22,7 +22,7 @@ function MainNavigation() {
         </ul>
       </nav>
     </header>
-  );
+  )
 }
 
-export default MainNavigation;
+export default MainNavigation
