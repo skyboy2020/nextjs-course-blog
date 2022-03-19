@@ -1,16 +1,34 @@
-import { Fragment } from "react"
-import Hero from '../components/home-page/hero'
-import FeaturedPosts from '../components/home-page/featured-posts'
+import { Fragment } from 'react';
+import Head from 'next/head';
 
-function HomePage() {
+import FeaturedPosts from '../components/home-page/featured-posts';
+import Hero from '../components/home-page/hero';
+import { getFeaturedPosts } from '../lib/posts-util';
+
+function HomePage(props) {
   return (
     <Fragment>
-      {/* 顶部个人介绍组件 */}
+      <Head>
+        <title>Max' Blog</title>
+        <meta
+          name='description'
+          content='I post about programming and web development.'
+        />
+      </Head>
       <Hero />
-      {/* 精选博客主题 */}
-      <FeaturedPosts />
+      <FeaturedPosts posts={props.posts} />
     </Fragment>
-  )
+  );
 }
 
-export default HomePage
+export function getStaticProps() {
+  const featuredPosts = getFeaturedPosts();
+
+  return {
+    props: {
+      posts: featuredPosts,
+    },
+  };
+}
+
+export default HomePage;
