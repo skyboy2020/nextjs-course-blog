@@ -6,7 +6,7 @@ function HomePage() {
     <Fragment>
       {/* 顶部个人介绍组件 */}
       <Hero />
-      {/* <FeaturedPosts /> */}
+      <FeaturedPosts />
     </Fragment>
   )
 }
