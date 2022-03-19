@@ -1,6 +1,11 @@
+import { Fragment } from "react/cjs/react.production.min"
+
 function HomePage() {
   return (
-    <div>index</div>
+    <Fragment>
+      <Hero />
+      <FeaturedPosts />
+    </Fragment>
   )
 }
 
