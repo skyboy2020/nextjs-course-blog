@@ -1,9 +1,11 @@
-import Image from './next/image'
+import Image from 'next/image'
 import styles from './hero.module.css'
 
+// Hero个人介绍组件
 function Hero() {
   return (
     <section className={styles.hero}>
+        {/* Image组件还有Layout响应式布局等，google搜索 nextjs image */}
         <div className={styles.image}>
             <Image 
                 src="/images/site/max.png" 

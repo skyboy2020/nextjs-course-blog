@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Image 组件使用：components/home-page/hero.js
+
+
+
 ## Getting Started
 
 First, run the development server:
