@@ -1,9 +1,32 @@
-import React from 'react'
+import Head from 'next/head';
+import { Fragment } from 'react';
 
-function AllPostPage() {
+import AllPosts from '../../components/posts/all-posts';
+import { getAllPosts } from '../../lib/posts-util';
+
+function AllPostsPage(props) {
   return (
-    <div>AllPostPage</div>
-  )
+    <Fragment>
+      <Head>
+        <title>All Posts</title>
+        <meta
+          name='description'
+          content='A list of all programming-related tutorials and posts!'
+        />
+      </Head>
+      <AllPosts posts={props.posts} />
+    </Fragment>
+  );
 }
 
-export default AllPostPage
+export function getStaticProps() {
+  const allPosts = getAllPosts();
+
+  return {
+    props: {
+      posts: allPosts,
+    },
+  };
+}
+
+export default AllPostsPage;

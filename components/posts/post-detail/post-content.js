@@ -11,6 +11,8 @@ function PostContent(props) {
 
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
 
+  //自定义markdown渲染规则
+  //参看github react-markdown组件文档说明
   const customRenderers = {
     // img(image) {
     //   return (
